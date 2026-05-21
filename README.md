@@ -1,6 +1,3 @@
-Paste this into your `README.md` file:
-
-````md
 # Jitsi + Jibri Recorder Autoscaling Project
 
 This project documents a Docker-based Jitsi Meet and Jibri recording setup with automated recorder scaling.  
@@ -330,5 +327,4 @@ docker compose -f jibri.yml down --remove-orphans
 
 ```
 
-One more thing: remove `VM-Credentials.docx` and any `SSL Certificates` folder from GitHub before pushing if they contain real credentials or keys.
-```
+
