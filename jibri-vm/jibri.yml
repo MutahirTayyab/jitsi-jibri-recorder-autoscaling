@@ -1,0 +1,721 @@
+services:
+  jibri1:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2222:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri1
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri1:/config
+      - ./recordings/jibri1:/config/recordings
+      - ./logs/jibri1:/config/logs
+      - ./asoundrc/asoundrc0:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri2:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2223:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri2
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri2:/config
+      - ./recordings/jibri2:/config/recordings
+      - ./logs/jibri2:/config/logs
+      - ./asoundrc/asoundrc1:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri3:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2224:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri3
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri3:/config
+      - ./recordings/jibri3:/config/recordings
+      - ./logs/jibri3:/config/logs
+      - ./asoundrc/asoundrc2:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri4:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2225:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri4
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri4:/config
+      - ./recordings/jibri4:/config/recordings
+      - ./logs/jibri4:/config/logs
+      - ./asoundrc/asoundrc3:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri5:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2226:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri5
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri5:/config
+      - ./recordings/jibri5:/config/recordings
+      - ./logs/jibri5:/config/logs
+      - ./asoundrc/asoundrc4:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri6:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2227:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri6
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri6:/config
+      - ./recordings/jibri6:/config/recordings
+      - ./logs/jibri6:/config/logs
+      - ./asoundrc/asoundrc5:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri7:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2228:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri7
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri7:/config
+      - ./recordings/jibri7:/config/recordings
+      - ./logs/jibri7:/config/logs
+      - ./asoundrc/asoundrc6:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri8:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2229:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri8
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri8:/config
+      - ./recordings/jibri8:/config/recordings
+      - ./logs/jibri8:/config/logs
+      - ./asoundrc/asoundrc7:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri9:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2230:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri9
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri9:/config
+      - ./recordings/jibri9:/config/recordings
+      - ./logs/jibri9:/config/logs
+      - ./asoundrc/asoundrc8:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri10:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2231:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri10
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri10:/config
+      - ./recordings/jibri10:/config/recordings
+      - ./logs/jibri10:/config/logs
+      - ./asoundrc/asoundrc9:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri11:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2232:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri11
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri11:/config
+      - ./recordings/jibri11:/config/recordings
+      - ./logs/jibri11:/config/logs
+      - ./asoundrc/asoundrc10:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri12:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2233:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri12
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri12:/config
+      - ./recordings/jibri12:/config/recordings
+      - ./logs/jibri12:/config/logs
+      - ./asoundrc/asoundrc11:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri13:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2234:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri13
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri13:/config
+      - ./recordings/jibri13:/config/recordings
+      - ./logs/jibri13:/config/logs
+      - ./asoundrc/asoundrc12:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri14:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2235:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri14
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri14:/config
+      - ./recordings/jibri14:/config/recordings
+      - ./logs/jibri14:/config/logs
+      - ./asoundrc/asoundrc13:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri15:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2236:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri15
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri15:/config
+      - ./recordings/jibri15:/config/recordings
+      - ./logs/jibri15:/config/logs
+      - ./asoundrc/asoundrc14:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri16:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2237:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri16
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri16:/config
+      - ./recordings/jibri16:/config/recordings
+      - ./logs/jibri16:/config/logs
+      - ./asoundrc/asoundrc15:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri17:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2238:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri17
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri17:/config
+      - ./recordings/jibri17:/config/recordings
+      - ./logs/jibri17:/config/logs
+      - ./asoundrc/asoundrc16:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri18:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2239:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri18
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri18:/config
+      - ./recordings/jibri18:/config/recordings
+      - ./logs/jibri18:/config/logs
+      - ./asoundrc/asoundrc17:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri19:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2240:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri19
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri19:/config
+      - ./recordings/jibri19:/config/recordings
+      - ./logs/jibri19:/config/logs
+      - ./asoundrc/asoundrc18:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri20:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2241:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri20
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri20:/config
+      - ./recordings/jibri20:/config/recordings
+      - ./logs/jibri20:/config/logs
+      - ./asoundrc/asoundrc19:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri21:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2242:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri21
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri21:/config
+      - ./recordings/jibri21:/config/recordings
+      - ./logs/jibri21:/config/logs
+      - ./asoundrc/asoundrc20:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri22:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2243:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri22
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri22:/config
+      - ./recordings/jibri22:/config/recordings
+      - ./logs/jibri22:/config/logs
+      - ./asoundrc/asoundrc21:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri23:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2244:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri23
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri23:/config
+      - ./recordings/jibri23:/config/recordings
+      - ./logs/jibri23:/config/logs
+      - ./asoundrc/asoundrc22:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri24:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2245:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri24
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri24:/config
+      - ./recordings/jibri24:/config/recordings
+      - ./logs/jibri24:/config/logs
+      - ./asoundrc/asoundrc23:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri25:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2246:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri25
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri25:/config
+      - ./recordings/jibri25:/config/recordings
+      - ./logs/jibri25:/config/logs
+      - ./asoundrc/asoundrc24:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri26:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2247:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri26
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri26:/config
+      - ./recordings/jibri26:/config/recordings
+      - ./logs/jibri26:/config/logs
+      - ./asoundrc/asoundrc25:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri27:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2248:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri27
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri27:/config
+      - ./recordings/jibri27:/config/recordings
+      - ./logs/jibri27:/config/logs
+      - ./asoundrc/asoundrc26:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri28:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2249:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri28
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri28:/config
+      - ./recordings/jibri28:/config/recordings
+      - ./logs/jibri28:/config/logs
+      - ./asoundrc/asoundrc27:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri29:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2250:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri29
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri29:/config
+      - ./recordings/jibri29:/config/recordings
+      - ./logs/jibri29:/config/logs
+      - ./asoundrc/asoundrc28:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
+  jibri30:
+    image: jitsi/jibri:${JITSI_IMAGE_VERSION:-stable-10888}
+    restart: ${RESTART_POLICY:-unless-stopped}
+    shm_size: '2gb'
+    cap_add:
+      - SYS_ADMIN
+      - NET_BIND_SERVICE
+    devices:
+      - /dev/snd:/dev/snd
+    ports:
+      - "127.0.0.1:2251:2222"
+    env_file:
+      - .env
+    environment:
+      - JIBRI_INSTANCE_ID=jibri30
+    extra_hosts:
+      - "telemed.pro.e-resourceplanning.com:192.168.223.120"
+    volumes:
+      - ./config/jibri30:/config
+      - ./recordings/jibri30:/config/recordings
+      - ./logs/jibri30:/config/logs
+      - ./asoundrc/asoundrc29:/home/jibri/.asoundrc:ro
+      - ./finalize/finalize.sh:/path/to/finalize:ro
+
