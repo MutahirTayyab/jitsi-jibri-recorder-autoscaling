@@ -324,7 +324,3 @@ docker compose -f jibri.yml down --remove-orphans
 4. Extra idle recorders are stopped after the configured timeout.
 5. Recordings remain saved on the Jibri host because Docker host-mounted volumes are used.
 6. Server resources should be monitored when increasing recorder count.
-
-```
-
-
