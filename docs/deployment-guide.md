@@ -1,11 +1,3 @@
-Create this file in your repo:
-
-```text
-docs/deployment-guide.md
-```
-
-Paste this content:
-
 ````md
 # Deployment Guide
 
