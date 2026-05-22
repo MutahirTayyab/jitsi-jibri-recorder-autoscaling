@@ -78,10 +78,7 @@ flowchart LR
 ```text
 .
 ├── docs/
-│   └── Jitsi_Jibri_Recorder_Autoscaling_Documentation_Updated.docx
-├── jitsi-vm/
-│   ├── docker-compose.yml
-│   └── .env.example
+│   └── deployment-guide.md
 ├── jibri-vm/
 │   ├── jibri.yml
 │   ├── .env.example
@@ -93,7 +90,11 @@ flowchart LR
 │   └── systemd/
 │       ├── jibri-autoscaler.service
 │       └── jibri-autoscaler.timer
+├── jitsi-vm/
+│   ├── docker-compose.yml
+│   └── .env.example
 ├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
