@@ -1,14 +1,13 @@
-````md
 # Deployment Guide
 
 This guide explains how to deploy the final Jitsi + Jibri recorder autoscaling setup.
 
 The project uses two separate servers:
 
-```text
+
 Jitsi Server  -> web, prosody, jicofo, jvb
 Jibri Server  -> multiple Jibri recorder containers + autoscaler
-````
+
 
 The Jibri recorders are scaled based on recorder availability. The autoscaler keeps one recorder warm and starts another recorder when no IDLE recorder is available.
 
