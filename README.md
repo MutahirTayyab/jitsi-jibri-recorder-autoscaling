@@ -80,8 +80,6 @@ flowchart LR
 ├── docs/
 │   └── deployment-guide.md
 ├── jibri-vm/
-│   ├── jibri.yml
-│   ├── .env.example
 │   ├── asoundrc/
 │   ├── finalize/
 │   │   └── finalize.sh
@@ -90,9 +88,11 @@ flowchart LR
 │   └── systemd/
 │       ├── jibri-autoscaler.service
 │       └── jibri-autoscaler.timer
+│   ├── .env.example
+│   ├── jibri.yml
 ├── jitsi-vm/
-│   ├── docker-compose.yml
-│   └── .env.example
+│   ├── .env.example
+│   └── docker-compose.yml
 ├── .gitignore
 ├── LICENSE
 └── README.md
