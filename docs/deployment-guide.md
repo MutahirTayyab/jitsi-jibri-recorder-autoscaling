@@ -6,6 +6,7 @@ The project uses two separate servers:
 
 
 Jitsi Server  -> web, prosody, jicofo, jvb
+
 Jibri Server  -> multiple Jibri recorder containers + autoscaler
 
 
