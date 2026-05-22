@@ -638,28 +638,7 @@ Start only one Jibri:
 docker compose -f jibri.yml up -d jibri1
 ```
 
----
-
-## Step 17: Security Notes
-
-Do not upload or expose:
-
-```text
-real .env files
-real passwords
-VM credentials
-SSL private keys
-PEM files
-recording files
-logs
-runtime config folders
-```
-
-Use `.env.example` as the template and generate your own secrets for production.
-
----
-
-## Step 18: Important Notes
+## Step 17: Important Notes
 
 1. One Jibri container can handle one active recording at a time.
 2. Multiple simultaneous recordings require multiple Jibri containers.
@@ -669,6 +648,3 @@ Use `.env.example` as the template and generate your own secrets for production.
 6. Recordings are persisted on the Jibri server using host-mounted Docker volumes.
 7. Jibri must be able to reach the Jitsi server on HTTPS, XMPP port 5222, and JVB UDP port 10000.
 8. Server resources should be monitored carefully when increasing the number of recorder containers.
-
-```
-```
